@@ -1,6 +1,7 @@
 from rest_framework import viewsets, permissions, status, generics
 from rest_framework.exceptions import NotFound
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from .models import Nutritionist
 from .serializers import (
@@ -62,7 +63,7 @@ class NutritionistViewSet(viewsets.ModelViewSet):
     """
     queryset = Nutritionist.objects.all()
     serializer_class = NutritionistSerializer
-    permission_classes = [permissions.IsAuthenticated, IsNutritionist]
+    permission_classes = [AllowAny]
     parser_classes = [MultiPartParser, FormParser]
 
     def get_serializer_class(self):

@@ -9,10 +9,10 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ('is_staff', 'is_superuser', 'is_active', 'role')
 
     ordering = ('email',)
-    search_fields = ('username', 'email', 'first_name', 'last_name')  # <-- Incluido username
+    search_fields = ('username', 'email', 'first_name', 'last_name')
 
     fieldsets = (
-        (None, {'fields': ('username', 'email', 'password')}),  # <-- Incluido username
+        (None, {'fields': ('username', 'email', 'password')}),
         (_('Información personal'), {'fields': ('first_name', 'last_name', 'phone', 'birth_date', 'role')}),
         (_('Permisos'), {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         (_('Fechas importantes'), {'fields': ('last_login',)}),

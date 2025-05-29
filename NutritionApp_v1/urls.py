@@ -34,4 +34,7 @@ urlpatterns = [
 
     # Progress tracking endpoints
     path('api/progress/', include('progress_tracking.urls')),
+
+    path('api/appointments/', include('appointments.urls')),
+
 ]

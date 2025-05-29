@@ -1,6 +1,4 @@
-Django>=5.2
-djangorestframework
-djangorestframework-simplejwt
-drf-spectacular
-psycopg2-binary         # para PostgreSQL
-gunicorn                # opcional, para producción
+Django==5.2.1
+djangorestframework==3.16.0
+djangorestframework_simplejwt==5.5.0
+drf_spectacular==0.28.0
